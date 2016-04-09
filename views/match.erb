@@ -1,18 +1,22 @@
-<h1>Red Alliance</h1>
-<% red_alliance.each do |team| %>
-<h4>Team <%= team['team_number'] %> - <%= team['nickname'] %></h4>
-<ul>
-  <li>Sponsored by <%= team['name'] %></li>
-  <li>From <%= team['location'] %></li>
-</ul>
-<% end -%>
-<br>
-<br>
-<h1>Blue Alliance</h1>
-<% blue_alliance.each do |team| %>
-<h4>Team <%= team['team_number'] %> - <%= team['nickname'] %></h4>
-<ul>
-  <li>Sponsored by <%= team['name'] %></li>
-  <li>From <%= team['location'] %></li>
-</ul>
-<% end -%>
+<div class="row">
+  <div class="col-md-6">
+    <h1>Red Alliance</h1>
+    <% red_alliance.each do |team| %>
+    <ul class="list-group">
+      <li class="list-group-item header_red"><h4>Team <%= team['team_number'] %> - <%= team['nickname'] %></h4></li>
+      <li class="list-group-item">aka <%= team['name'] %></li>
+      <li class="list-group-item">From <%= team['location'] %></li>
+    </ul>
+    <% end -%>
+  </div>
+  <div class="col-md-6">
+    <h1>Blue Alliance</h1>
+    <% blue_alliance.each do |team| %>
+    <ul class="list-group">
+      <li class="list-group-item header_blue"><h4>Team <%= team['team_number'] %> - <%= team['nickname'] %></h4></li>
+      <li class="list-group-item">aka <%= team['name'] %></li>
+      <li class="list-group-item">From <%= team['location'] %></li>
+    </ul>
+    <% end -%>
+  </div>
+</div>
