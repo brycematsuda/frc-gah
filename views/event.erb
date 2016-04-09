@@ -1,0 +1,14 @@
+<table class="table">
+	<thead>
+		<tr>
+			<th>Matches</th>
+		</tr>
+	</thead>
+  <tbody>
+    <% matches.each do |match| %>
+    <tr>
+      <td><a href="/match/<%= match['key'] %>"><%= match['key'] %></a></td>
+    </tr>
+    <% end -%>
+  </tbody>
+</table>
