@@ -6,6 +6,13 @@
       <li class="list-group-item header_red"><h4>Team <%= team['team_number'] %> - <%= team['nickname'] %></h4></li>
       <li class="list-group-item">aka <%= team['name'] %></li>
       <li class="list-group-item">From <%= team['location'] %></li>
+      <li class="list-group-item">
+        <ul>
+          <% team['awards'].each do |award| %>
+          <li><%= award %></li>
+          <% end -%>
+        </ul>
+      </li>
     </ul>
     <% end -%>
   </div>
@@ -16,6 +23,13 @@
       <li class="list-group-item header_blue"><h4>Team <%= team['team_number'] %> - <%= team['nickname'] %></h4></li>
       <li class="list-group-item">aka <%= team['name'] %></li>
       <li class="list-group-item">From <%= team['location'] %></li>
+      <li class="list-group-item">
+        <ul>
+          <% team['awards'].each do |award| %>
+          <li><%= award %></li>
+          <% end -%>
+        </ul>
+      </li>
     </ul>
     <% end -%>
   </div>
